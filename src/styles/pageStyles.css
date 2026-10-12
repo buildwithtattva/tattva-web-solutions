@@ -1,0 +1,391 @@
+/* ==========================================================================
+   TATTVA WEB SOLUTIONS — PAGE-SPECIFIC UI DESIGN STYLES SYSTEM
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. LIQUID CHROME UI (PAGE 1 — HOMEPAGE)
+   Future metallic reflections, liquid-metal gradients, high contrast
+   -------------------------------------------------------------------------- */
+.liquid-chrome-page {
+  background-color: #030712;
+  color: #f3f4f6;
+  font-family: var(--font-geist-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+.chrome-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(16px);
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chrome-card:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 12px 40px 0 rgba(56, 189, 248, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+  transform: translateY(-4px);
+}
+
+.chrome-text-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 45%, #38bdf8 80%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.liquid-metallic-blob {
+  background: radial-gradient(circle at 30% 30%, #38bdf8, #818cf8 40%, #030712 70%);
+  filter: blur(60px);
+  opacity: 0.35;
+}
+
+/* --------------------------------------------------------------------------
+   2. NEWSPAPER UI (PAGE 2 — ABOUT US)
+   Editorial layout, fine dividers, serif headlines, structured story
+   -------------------------------------------------------------------------- */
+.newspaper-page {
+  background-color: #fbf9f5;
+  color: #1a1a1a;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.newspaper-header-border {
+  border-top: 3px double #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.newspaper-divider {
+  border-right: 1px solid #d4ceb8;
+}
+
+@media (max-width: 1023px) {
+  .newspaper-divider {
+    border-right: none;
+    border-bottom: 1px solid #d4ceb8;
+    padding-bottom: 2rem;
+  }
+}
+
+.newspaper-title {
+  font-family: 'Cinzel', 'Playfair Display', 'Georgia', serif;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: #111111;
+}
+
+.newspaper-meta {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #666666;
+}
+
+/* --------------------------------------------------------------------------
+   3. INFLATED UI (PAGE 3 — SERVICES)
+   Puffy 3D tactile elements, soft volume, rounded shapes, soft shadows
+   -------------------------------------------------------------------------- */
+.inflated-page {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.inflated-card {
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  box-shadow: 12px 12px 24px #080d19, -12px -12px 24px #16213b, inset 2px 2px 4px rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.inflated-card:hover {
+  transform: scale(1.02) translateY(-2px);
+  box-shadow: 16px 16px 32px #060912, -16px -16px 32px #1a2746, inset 3px 3px 6px rgba(255, 255, 255, 0.15);
+}
+
+.inflated-pill {
+  background: linear-gradient(145deg, #3b82f6, #2563eb);
+  box-shadow: 4px 4px 10px #1e3a8a, -4px -4px 10px #3b82f6;
+  border-radius: 9999px;
+}
+
+/* --------------------------------------------------------------------------
+   4. MORPHING UI (PAGE 4 — PRODUCTS & SOLUTIONS)
+   Organic morphing shapes, fluid card transitions, soft gradient overlays
+   -------------------------------------------------------------------------- */
+.morphing-page {
+  background-color: #0b0f19;
+  color: #e2e8f0;
+}
+
+.morphing-shape {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  transition: all 0.8s ease-in-out;
+}
+
+.morphing-shape:hover {
+  border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+}
+
+.morphing-card {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 1.5rem;
+  transition: border-radius 0.5s ease, transform 0.3s ease;
+}
+
+.morphing-card:hover {
+  border-radius: 2.5rem 1rem 2.5rem 1rem;
+  transform: translateY(-4px);
+}
+
+/* --------------------------------------------------------------------------
+   5. ASYMMETRIC UI (PAGE 5 — PROJECTS & CASE STUDIES)
+   Unconventional grid proportions, overlapping components, visual tension
+   -------------------------------------------------------------------------- */
+.asymmetric-page {
+  background-color: #090d16;
+  color: #f1f5f9;
+}
+
+.asymmetric-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.asymmetric-card-wide {
+  grid-column: span 8;
+}
+
+.asymmetric-card-narrow {
+  grid-column: span 4;
+}
+
+@media (max-width: 1024px) {
+  .asymmetric-card-wide,
+  .asymmetric-card-narrow {
+    grid-column: span 12;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. CYBERPUNK UI (PAGE 6 — AI SOLUTIONS)
+   Neon cyan/magenta, HUD borders, glitch accents, neural grid overlays
+   -------------------------------------------------------------------------- */
+.cyberpunk-page {
+  background-color: #050508;
+  color: #00f0ff;
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.cyberpunk-border {
+  border: 1px solid #00f0ff;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+  clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+}
+
+.cyberpunk-card {
+  background: rgba(10, 10, 18, 0.9);
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.cyberpunk-card:hover {
+  border-color: #ff007f;
+  box-shadow: 0 0 30px rgba(255, 0, 127, 0.35);
+}
+
+.cyberpunk-neon-magenta {
+  color: #ff007f;
+  text-shadow: 0 0 8px rgba(255, 0, 127, 0.6);
+}
+
+.cyberpunk-neon-cyan {
+  color: #00f0ff;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   7. MONOCHROME UI (PAGE 7 — INSIGHTS / BLOGS)
+   Strict black-and-white editorial high readability
+   -------------------------------------------------------------------------- */
+.monochrome-page {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.monochrome-card {
+  background-color: #0a0a0a;
+  border: 1px solid #262626;
+  transition: border-color 0.2s ease;
+}
+
+.monochrome-card:hover {
+  border-color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   8. DESERT UI (PAGE 8 — CONTACT US)
+   Sand, terracotta, warm ivory tones, dune-inspired organic curves
+   -------------------------------------------------------------------------- */
+.desert-page {
+  background-color: #f5f0eb;
+  color: #3d2f2b;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+.desert-card {
+  background-color: #ffffff;
+  border: 1px solid #e2d7cd;
+  box-shadow: 0 10px 30px rgba(120, 85, 60, 0.08);
+  border-radius: 1.5rem;
+}
+
+.desert-input {
+  background-color: #faf7f2;
+  border: 1.5px solid #d4c5b9;
+  color: #2b1e1a;
+  border-radius: 0.75rem;
+  transition: border-color 0.2s ease;
+}
+
+.desert-input:focus {
+  outline: none;
+  border-color: #c26d47;
+  box-shadow: 0 0 0 3px rgba(194, 109, 71, 0.15);
+}
+
+.desert-button {
+  background-color: #c26d47;
+  color: #ffffff;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.desert-button:hover {
+  background-color: #a65835;
+}
+
+/* --------------------------------------------------------------------------
+   9. ANTI-DESIGN UI (PAGE 9 — FAQ)
+   Unconventional alignments, bold contrasting blocks, raw typography
+   -------------------------------------------------------------------------- */
+.antidesign-page {
+  background-color: #fef08a;
+  color: #000000;
+  font-family: Impact, var(--font-geist-mono), sans-serif;
+}
+
+.antidesign-block {
+  background-color: #000000;
+  color: #ffffff;
+  border: 4px solid #000000;
+  box-shadow: 8px 8px 0px #ef4444;
+  transform: rotate(-1deg);
+  transition: transform 0.2s ease;
+}
+
+.antidesign-block:nth-child(even) {
+  transform: rotate(1deg);
+  box-shadow: -8px 8px 0px #3b82f6;
+}
+
+.antidesign-block:hover {
+  transform: rotate(0deg) scale(1.01);
+}
+
+/* --------------------------------------------------------------------------
+   10. BRUTALISM UI (PAGE 10 — TERMS & CONDITIONS)
+   Thick black borders, high contrast, raw structured blocks
+   -------------------------------------------------------------------------- */
+.brutalism-page {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.brutalism-box {
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 5px 5px 0px #000000;
+  border-radius: 0;
+}
+
+.brutalism-box:hover {
+  box-shadow: 8px 8px 0px #000000;
+}
+
+/* --------------------------------------------------------------------------
+   12. FULL-BLEED UI (PAGE 12 — TERMS OF USE)
+   Edge-to-edge layout, full-width section statements
+   -------------------------------------------------------------------------- */
+.fullbleed-page {
+  background-color: #020617;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+.fullbleed-section {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+@media (max-width: 768px) {
+  .fullbleed-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   13. ABSTRACT ART UI (PAGE 13 — PRIVACY POLICY)
+   Geometric abstract shapes, artistic visual elements
+   -------------------------------------------------------------------------- */
+.abstract-page {
+  background-color: #0f0728;
+  color: #f3e8ff;
+}
+
+.abstract-card {
+  background: rgba(30, 15, 60, 0.7);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 2rem;
+  box-shadow: 0 15px 35px rgba(126, 34, 206, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   14. ARCADE UI (PAGE 14 — 404 NOT FOUND)
+   Retro pixel art, neon arcade buttons, game overlay
+   -------------------------------------------------------------------------- */
+.arcade-page {
+  background-color: #0d0221;
+  color: #00ff66;
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.arcade-box {
+  background-color: #19053a;
+  border: 4px solid #ff0055;
+  box-shadow: 0 0 25px rgba(255, 0, 85, 0.5), inset 0 0 15px rgba(0, 255, 102, 0.2);
+}
+
+.arcade-button {
+  background-color: #ff0055;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 0 5px 0px #990033;
+  transition: all 0.1s ease;
+}
+
+.arcade-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0px #990033;
+}
